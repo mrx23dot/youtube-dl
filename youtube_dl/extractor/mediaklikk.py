@@ -8,14 +8,14 @@ import re
 
 class MediaKlikkIE(InfoExtractor):
     # Named regular expression group: (?P<name>...) used for referencing match as 'id'
-    _VALID_URL = r'https?:\/\/(?:www\.)?(?:mediaklikk|m4sport|hirado)\.hu\/.*?videok?\/(?P<id>[^\/]+)\/?'
+    _VALID_URL = r'https?:\/\/(?:www\.)?(?:mediaklikk|m4sport|hirado)\.hu\/.*?videok?.*\/(?P<id>[^\/]+)\/?'
 
     _TEST = {
         'url': 'https://mediaklikk.hu/adal2020/video/2020/03/07/a-dal-donto/',
         'info_dict': {
-            'id': 'kiberma-2020-04-30-i-adas',
+            'id': 'a-dal-donto',
             'ext': 'mp4',
-            'title': 'KiberMa, 2020.04.30-i adás | MédiaKlikk',
+            'title': 'A Dal 2020, Döntő | MédiaKlikk',
             # no thumbnail extractable
         }
     }
